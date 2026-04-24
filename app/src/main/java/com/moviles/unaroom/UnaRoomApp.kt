@@ -1,18 +1,17 @@
 package com.moviles.unaroom
 
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import com.moviles.unaroom.navigation.AppNavHost
 import com.moviles.unaroom.ui.theme.UnaRoomTheme
 
+/**
+ * Root Composable for the UnaRoom application.
+ * Wraps the entire navigation host with the custom theme.
+ */
 @Composable
 fun UnaRoomApp() {
     UnaRoomTheme {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            AppNavHost(innerPadding = innerPadding)
-        }
+        // Main navigation host for the application
+        AppNavHost()
     }
 }
-
